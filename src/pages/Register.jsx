@@ -25,7 +25,7 @@ const Register = () => {
   
     //  handleRegister
 
-      const handleRegister = data => {
+      const handleRegister = (data, e) => {
     
         const {name, email, photoURL, password } = data
 
@@ -54,6 +54,14 @@ const Register = () => {
             })
 
         toast.success("Registration is successful")
+
+        // reset the form
+
+        console.log(e.target.reset())
+
+        
+
+        
 
         })
         .catch(error => {
