@@ -15,7 +15,7 @@ const Login = () => {
 
     // from AuthProvider
 
-    const {signIn, loginWithGoogle} = useContext(AuthContext)
+    const {signIn, loginWithGoogle, loginWithGithub} = useContext(AuthContext)
 
     
 
@@ -70,6 +70,18 @@ const Login = () => {
 
     }
 
+    // handle github login
+
+    const handleGithubLogin = () => {
+        loginWithGithub()
+        .then(result => {
+            console.log(result.user)
+        })
+        .catch(error => {
+            console.log(error.message)
+        })
+    }
+
  
 
     return (
@@ -105,7 +117,7 @@ const Login = () => {
 
                             <button onClick={handleGoogleLogin} className="btn bg-[#f8f7f4] hover:bg-[#efebde] mb-2 w-full"> <FaGoogle className="text-xl mr-2" /> Sign In with Google  </button>
 
-                            <button className="btn bg-[#f8f7f4] hover:bg-[#efebde] w-full"> <FaGithub className="text-xl mr-2" /> Sign In with Github  </button>
+                            <button onClick={handleGithubLogin} className="btn bg-[#f8f7f4] hover:bg-[#efebde] w-full"> <FaGithub className="text-xl mr-2" /> Sign In with Github  </button>
 
                         </div>
 
