@@ -60,6 +60,8 @@ const Login = () => {
         loginWithGoogle()
         .then(result => {
             console.log(result.user)
+
+            toast.success("Login is successful")
         })
         .catch(error => {
             console.log(error.message)
@@ -76,6 +78,7 @@ const Login = () => {
         loginWithGithub()
         .then(result => {
             console.log(result.user)
+            toast.success("Login is successful")
         })
         .catch(error => {
             console.log(error.message)
@@ -115,9 +118,11 @@ const Login = () => {
 
                         <div className="my-6">
 
-                            <button onClick={handleGoogleLogin} className="btn bg-[#f8f7f4] hover:bg-[#efebde] mb-2 w-full"> <FaGoogle className="text-xl mr-2" /> Sign In with Google  </button>
+                            
 
-                            <button onClick={handleGithubLogin} className="btn bg-[#f8f7f4] hover:bg-[#efebde] w-full"> <FaGithub className="text-xl mr-2" /> Sign In with Github  </button>
+                            <p onClick={handleGoogleLogin} className="btn bg-[#f8f7f4] hover:bg-[#efebde] mb-2 w-full"> <FaGoogle className="text-xl mr-2" /> Sign In with Google  </p>
+
+                            <p onClick={handleGithubLogin} className="btn bg-[#f8f7f4] hover:bg-[#efebde] w-full"> <FaGithub className="text-xl mr-2" /> Sign In with Github  </p>
 
                         </div>
 
