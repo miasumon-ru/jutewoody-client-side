@@ -6,11 +6,16 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Link } from "react-router-dom";
 
+import { FaGoogle } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+
+
+
 const Login = () => {
 
     // from AuthProvider
 
-    const {signIn} = useContext(AuthContext)
+    const {signIn, loginWithGoogle} = useContext(AuthContext)
 
     
 
@@ -48,6 +53,24 @@ const Login = () => {
 
     }
 
+    // handle Google Login
+
+    const handleGoogleLogin = () => {
+
+        loginWithGoogle()
+        .then(result => {
+            console.log(result.user)
+        })
+        .catch(error => {
+            console.log(error.message)
+        })
+
+
+
+
+    }
+
+ 
 
     return (
         <div className="hero min-h-screen  ">
@@ -78,7 +101,15 @@ const Login = () => {
                             <button className="btn btn-primary">Login</button>
                         </div>
 
-                        <div>
+                        <div className="my-6">
+
+                            <button onClick={handleGoogleLogin} className="btn bg-[#f8f7f4] hover:bg-[#efebde] mb-2 w-full"> <FaGoogle className="text-xl mr-2" /> Sign In with Google  </button>
+
+                            <button className="btn bg-[#f8f7f4] hover:bg-[#efebde] w-full"> <FaGithub className="text-xl mr-2" /> Sign In with Github  </button>
+
+                        </div>
+
+                        <div className="text-center">
                             <p className="font-semibold" > Do not have an account ? </p>
                             <p className="font-semibold" > Please <span className="text-xl font bold underline ml-2" > <Link to={'/register'}> Register </Link> </span> </p>
                         </div>
