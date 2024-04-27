@@ -133,7 +133,7 @@ const Navbar = () => {
                         <div className="flex flex-row gap-4 items-center">
 
 
-                            <a data-tooltip-id="my-tooltip" data-tooltip-content={user?.displayName || user?.reloadUserInfo?.providerUserInfo[0]?.screenName}>
+                            <a data-tooltip-id="my-tooltip" data-tooltip-content={user?.displayName || user?.reloadUserInfo?.providerUserInfo[0]?.screenName} >
                                 <img className="w-10 h-10 rounded-full" src={user?.photoURL} alt="userImage" />
                             </a>
 
