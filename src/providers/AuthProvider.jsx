@@ -22,6 +22,7 @@ const AuthProvider = ({children}) => {
 
     // create User
     const createUser = (email, password) => {
+        setLoading(true)
         
         return createUserWithEmailAndPassword(auth, email, password)
     }
@@ -29,19 +30,22 @@ const AuthProvider = ({children}) => {
     // signIn
 
     const signIn = (email, password) => {
+        setLoading(true)
         return signInWithEmailAndPassword(auth, email, password)
     }
 
     // update User's Profile
 
     const profileUpdate = (obj) => {
+        setLoading(true)
 
         updateProfile(auth.currentUser, obj)
     }
 
-       // GoogleL ogin
+       // GoogleL Login
 
        const loginWithGoogle = () => {
+        setLoading(true)
 
         return signInWithPopup(auth, googleProvider)
     }
@@ -49,6 +53,7 @@ const AuthProvider = ({children}) => {
     // Github Login
 
     const loginWithGithub = () => {
+        setLoading(true)
 
         return signInWithPopup(auth, githubProvider)
     }
@@ -56,6 +61,7 @@ const AuthProvider = ({children}) => {
     // sign out
 
     const logOut = () => {
+      
         return signOut(auth)
     }
 
@@ -66,6 +72,7 @@ const AuthProvider = ({children}) => {
          const unSubscribe = onAuthStateChanged(auth, (currentUser)=> {
             console.log(currentUser)
             setUser(currentUser)
+            setLoading(false)
          })
 
          return ()=> {
@@ -82,13 +89,13 @@ const AuthProvider = ({children}) => {
         createUser, 
         user, 
         setUser, 
-        loading, 
         setLoading,
         profileUpdate,
         signIn,
         loginWithGoogle,
         loginWithGithub,
-        logOut
+        logOut,
+        loading
     }
 
     return (

@@ -3,7 +3,7 @@
  const MyCraftsList = () => {
     return (
         <div>
-            <h1> this is MyCraftsList page </h1>
+            <h1 className="text-center"> this is MyCraftsList page </h1>
             
         </div>
     );

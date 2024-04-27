@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form"
 import { useContext } from "react";
 import { AuthContext } from "../providers/AuthProvider";
@@ -8,11 +8,14 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 
+
+
 const Register = () => {
 
     // from AuthProvider
 
-    const {createUser, profileUpdate} = useContext(AuthContext)
+        
+        const {createUser, profileUpdate, logOut} = useContext(AuthContext)
 
     // from react hook form
 
@@ -21,6 +24,10 @@ const Register = () => {
         handleSubmit
 
       } = useForm()
+
+    //   hook
+
+    const navigate = useNavigate()
 
   
     //  handleRegister
@@ -53,11 +60,32 @@ const Register = () => {
                 photoURL : photoURL
             })
 
-        toast.success("Registration is successful")
+        toast.success("  Successful Registration and Please Login ")
+
+        
 
         // reset the form
 
         console.log(e.target.reset())
+
+
+        // logOut after registration
+
+        logOut()
+        .then(() => {
+            console.log('LogOut is successfull')
+        })
+
+        // navigate to Login Page after successful Login
+       
+
+        setTimeout(()=>{
+            navigate('/login')
+        }, 3000)
+
+
+
+        
 
         
 
@@ -65,6 +93,10 @@ const Register = () => {
 
         })
         .catch(error => {
+
+            if(error.message === "Firebase: Error (auth/email-already-in-use)."){
+                toast.error("You have aleady used this email")
+            }
             console.log(error.message)
         })
 

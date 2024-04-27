@@ -1,4 +1,4 @@
-import { createBrowserRouter} from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 
 
 import MainLayout from "../layout/MainLayout";
@@ -9,43 +9,48 @@ import CraftsAdd from "../pages/CraftsAdd";
 import MyCraftsList from "../pages/MyCraftsList";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
+import PrivateRoutes from "./PrivateRoutes";
 
 
 const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <MainLayout></MainLayout>,
-      errorElement: <ErrorPage></ErrorPage>,
-      children: [
+  {
+    path: "/",
+    element: <MainLayout></MainLayout>,
+    errorElement: <ErrorPage></ErrorPage>,
+    children: [
 
-        {
-          path: "/" ,
-          element: <Home></Home> ,
-        },
-        {
-          path: "/craftsAll" ,
-          element: <CraftsAll></CraftsAll> ,
-        },
-        {
-          path: "/craftsAdd" ,
-          element: <CraftsAdd></CraftsAdd> ,
-        },
-        {
-          path: "/myCraftsList" ,
-          element: <MyCraftsList></MyCraftsList> ,
-        },
-        {
-          path: "/login" ,
-          element: <Login></Login> ,
-        },
-        {
-          path: "/register" ,
-          element: <Register></Register> ,
-        }
+      {
+        path: "/",
+        element: <Home></Home>
+      },
+      {
+        path: "/craftsAll",
+        element: <CraftsAll></CraftsAll>
+      },
+      {
+        path: "/craftsAdd",
+        element: <PrivateRoutes>
+                    <CraftsAdd></CraftsAdd>
+                 </PrivateRoutes>
+      },
+      {
+        path: "/myCraftsList",
+        element: <PrivateRoutes>
+                     <MyCraftsList></MyCraftsList>
+                 </PrivateRoutes>
+      },
+      {
+        path: "/login",
+        element: <Login></Login>
+      },
+      {
+        path: "/register",
+        element: <Register></Register>
+      }
 
 
-      ],
-    },
-  ]);
+    ],
+  },
+]);
 
-  export default router
+export default router
