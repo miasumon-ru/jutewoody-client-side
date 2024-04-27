@@ -10,6 +10,7 @@ import MyCraftsList from "../pages/MyCraftsList";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import PrivateRoutes from "./PrivateRoutes";
+import ViewDetails from "../pages/ViewDetails";
 
 
 const router = createBrowserRouter([
@@ -47,6 +48,11 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>
+      },
+      {
+        path: "/viewDetails/:id",
+        element: <ViewDetails></ViewDetails>,
+        loader: ({params}) => fetch(`http://localhost:5000/viewDetails/${params.id}`)
       }
 
 

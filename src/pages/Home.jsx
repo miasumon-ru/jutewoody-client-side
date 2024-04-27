@@ -8,7 +8,6 @@ const Home = () => {
 
     const craftItems = useLoaderData()
 
-    console.log(craftItems)
 
     return (
         <div className="mt-10">
