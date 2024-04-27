@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import Slider from "../components/Slider/Slider";
 import CraftItem from "../components/CraftItem/CraftItem";
+import Testimonial from "../components/Testimonial/Testimonial";
 
 
 
@@ -13,6 +14,8 @@ const Home = () => {
         <div className="mt-10">
 
             <Slider></Slider>
+
+            {/* Crafts Item Section */}
 
             <div>
                 <div className="max-w-lg mx-auto" >
@@ -27,6 +30,13 @@ const Home = () => {
                         craftItems.map(craftItem => <CraftItem craftItem={craftItem} key={craftItem._id}></CraftItem>)
                     }
                 </div>
+            </div>
+
+
+            {/* Testimonial Section */}
+
+            <div>
+                <Testimonial></Testimonial>
             </div>
 
       
