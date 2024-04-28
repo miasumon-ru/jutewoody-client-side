@@ -1,6 +1,7 @@
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Typewriter } from 'react-simple-typewriter'
 
 // Import Swiper styles
 import 'swiper/css';
@@ -26,6 +27,8 @@ import { Link } from 'react-router-dom';
 
 
 const Slider = () => {
+
+
     return (
 
 
@@ -50,8 +53,26 @@ const Slider = () => {
                 </div>
 
                 <div className='absolute'>
+
+
                     <p className=' text-2xl md:text-6xl text-gray-200 font-bold '>
-                        Explore the Rustic <br /> Charm of JuteWoody
+                        Explore The JuteWoody {''} <br />
+
+                        <span className='text-green-200 font-bold'>
+
+                            <Typewriter 
+                                words={[ "Sustainable", "Eco-Friendly", "Organic", "Charming", 'Rustic' ]}
+                                loop={0}
+                                cursor
+                                cursorStyle='_'
+                                typeSpeed={70}
+                                deleteSpeed={50}
+                                delaySpeed={1000}
+
+
+                            />
+
+                        </span>
                     </p>
 
                     <Link to={"/craftsAll"}>
@@ -68,9 +89,26 @@ const Slider = () => {
                 </div>
 
                 <div className='absolute'>
-                    <p className=' text-2xl md:text-6xl text-gray-200 font-bold '>
-                        Explore the Rustic <br /> Charm of JuteWoody
+                <p className=' text-2xl md:text-6xl text-gray-200 font-bold '>
+                        Explore The JuteWoody {''} <br />
+
+                        <span className='text-green-200 font-bold'>
+
+                            <Typewriter
+                                words={["Sustainable", "Eco-Friendly", "Organic", "Charming", 'Rustic']}
+                                loop={0}
+                                cursor
+                                cursorStyle='_'
+                                typeSpeed={70}
+                                deleteSpeed={50}
+                                delaySpeed={1000}
+
+
+                            />
+
+                        </span>
                     </p>
+
 
                     <Link to={"/craftsAll"}>
                         <button className='btn mt-10 '> View All </button>
@@ -86,9 +124,26 @@ const Slider = () => {
                 </div>
 
                 <div className='absolute'>
-                    <p className=' text-2xl md:text-6xl text-gray-200 font-bold '>
-                        Explore the Rustic <br /> Charm of JuteWoody
+                <p className=' text-2xl md:text-6xl text-gray-200 font-bold '>
+                        Explore The JuteWoody {''} <br />
+
+                        <span className='text-green-200 font-bold'>
+
+                            <Typewriter
+                                words={["Sustainable", "Eco-Friendly", "Organic", "Charming", 'Rustic']}
+                                loop={0}
+                                cursor
+                                cursorStyle='_'
+                                typeSpeed={70}
+                                deleteSpeed={50}
+                                delaySpeed={1000}
+
+
+                            />
+
+                        </span>
                     </p>
+
 
                     <Link to={"/craftsAll"}>
                         <button className='btn mt-10 '> View All </button>
@@ -104,9 +159,27 @@ const Slider = () => {
                 </div>
 
                 <div className='absolute'>
-                    <p className=' text-2xl md:text-6xl text-gray-300 font-bold '>
-                        Explore the Rustic <br /> Charm of JuteWoody
+
+                <p className=' text-2xl md:text-6xl text-gray-200 font-bold '>
+                        Explore The JuteWoody {''} <br />
+
+                        <span className='text-green-200 font-bold'>
+
+                            <Typewriter
+                                words={["Sustainable", "Eco-Friendly", "Organic", "Charming", 'Rustic']}
+                                loop={0}
+                                cursor
+                                cursorStyle='_'
+                                typeSpeed={70}
+                                deleteSpeed={50}
+                                delaySpeed={1000}
+
+
+                            />
+
+                        </span>
                     </p>
+
 
                     <Link to={"/craftsAll"}>
                         <button className='btn mt-10 '> View All </button>
@@ -123,8 +196,25 @@ const Slider = () => {
 
                 <div className='absolute'>
                     <p className=' text-2xl md:text-6xl text-gray-200 font-bold '>
-                        Explore the Rustic <br /> Charm of JuteWoody
+                        Explore The JuteWoody {''} <br />
+
+                        <span className='text-green-200 font-bold'>
+
+                            <Typewriter
+                                words={["Sustainable", "Eco-Friendly", "Organic", "Charming", 'Rustic']}
+                                loop={0}
+                                cursor
+                                cursorStyle='_'
+                                typeSpeed={70}
+                                deleteSpeed={50}
+                                delaySpeed={1000}
+
+
+                            />
+
+                        </span>
                     </p>
+
 
                     <Link to={"/craftsAll"}>
                         <button className='btn mt-10 '> View All </button>
