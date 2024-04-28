@@ -21,16 +21,13 @@ const AuthProvider = ({children}) => {
     const [loading, setLoading] = useState(true)
 
     // create User
-    const createUser = (email, password) => {
-        setLoading(true)
-        
+    const createUser = (email, password) => {   
         return createUserWithEmailAndPassword(auth, email, password)
     }
 
     // signIn
 
     const signIn = (email, password) => {
-        setLoading(true)
         return signInWithEmailAndPassword(auth, email, password)
     }
 
@@ -45,15 +42,13 @@ const AuthProvider = ({children}) => {
        // GoogleL Login
 
        const loginWithGoogle = () => {
-        setLoading(true)
-
+        
         return signInWithPopup(auth, googleProvider)
     }
 
     // Github Login
 
     const loginWithGithub = () => {
-        setLoading(true)
 
         return signInWithPopup(auth, githubProvider)
     }
