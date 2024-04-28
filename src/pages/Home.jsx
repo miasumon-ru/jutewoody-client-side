@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import Slider from "../components/Slider/Slider";
 import CraftItem from "../components/CraftItem/CraftItem";
 import Testimonial from "../components/Testimonial/Testimonial";
+import Accordion from "../components/Accordion/Accordion";
 
 
 
@@ -39,8 +40,15 @@ const Home = () => {
                 <Testimonial></Testimonial>
             </div>
 
-      
-            
+
+            {/* Frequently Asked Questions */}
+
+            <div>
+                <Accordion></Accordion>
+            </div>
+
+
+
         </div>
     );
 };
