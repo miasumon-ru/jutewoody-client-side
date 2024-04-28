@@ -58,23 +58,14 @@ const UpdatePage = () => {
                     <form onSubmit={handleSubmit(handleUpdate)} className="card-body font-bold">
 
 
-                        <div className="md:flex md:flex-row gap-4 w-full ">
-                            <div className="form-control w-full  ">
-                                <label className="label">
-                                    <span className="label-text"> Photo URL</span>
-                                </label>
-                                <input defaultValue={craftItem.photoURL} type="text"  {...register("photoURL")} placeholder="Photo URL" className="input input-bordered w-full" required />
-                            </div>
 
-                            <div className="form-control w-full ">
-                                <label className="label">
-                                    <span className="label-text">Stock Status</span>
-                                </label>
-                                <input defaultValue={craftItem.stockStatus} type="text"  {...register("stockStatus")} placeholder="Stock Status" className="input input-bordered" required />
-                            </div>
+
+                        <div className="form-control w-full  ">
+                            <label className="label">
+                                <span className="label-text"> Photo URL</span>
+                            </label>
+                            <input defaultValue={craftItem.photoURL} type="text"  {...register("photoURL")} placeholder="Photo URL" className="input input-bordered w-full" required />
                         </div>
-
-
 
                         <div className="md:flex md:flex-row gap-4 w-full " >
                             <div className="form-control w-full">
@@ -84,6 +75,31 @@ const UpdatePage = () => {
                                 <input defaultValue={craftItem.itemName} type="text"  {...register("itemName")} placeholder="Item Name" className="input input-bordered" required />
                             </div>
 
+                            <div className="form-control w-full">
+                                <label className="label">
+                                    <span className="label-text"> SubCategory Name </span>
+                                </label>
+                                <select defaultValue={craftItem.subCategoryName} className="border p-4 rounded-sm w-full " {...register("subCategoryName")}>
+                                    <option value="Wooden Furniture & Sculptures">Wooden Furniture & Sculptures</option>
+                                    <option value="Wooden Home Decor">Wooden Home Decor</option>
+                                    <option value="Wooden Utensils and Kitchenware">Wooden Utensils and Kitchenware</option>
+                                    <option value="Jute Home Decor">Jute Home Decor</option>
+                                    <option value="Jute Kitchenware & utensils">Jute Kitchenware & utensils </option>
+                                    <option value="Jute and wooden jwellery">Jute and wooden jwellery</option>
+                                </select>
+
+                            </div>
+                        </div>
+
+
+                        <div className="md:flex md:flex-row gap-4 w-full " >
+
+                            <div className="form-control w-full">
+                                <label className="label">
+                                    <span className="label-text">Short Description</span>
+                                </label>
+                                <input defaultValue={craftItem.shortDescription} type="text"  {...register("shortDescription")} placeholder="Short Description" className="input input-bordered" required />
+                            </div>
 
                             <div className="form-control w-full ">
                                 <label className="label">
@@ -91,8 +107,6 @@ const UpdatePage = () => {
                                 </label>
                                 <input defaultValue={craftItem.price} type="text"  {...register("price")} placeholder="Price" className="input input-bordered" required />
                             </div>
-
-
                         </div>
 
 
@@ -115,6 +129,24 @@ const UpdatePage = () => {
 
                             </div>
                         </div>
+
+
+                        <div className="md:flex md:flex-row gap-4 w-full ">
+                            <div className="form-control w-full">
+                                <label className="label">
+                                    <span className="label-text">Processing Time</span>
+                                </label>
+                                <input defaultValue={craftItem.processingTime} type="text"  {...register("processingTime")} placeholder="Processing Time" className="input input-bordered" required />
+                            </div>
+
+                            <div className="form-control w-full ">
+                                <label className="label">
+                                    <span className="label-text">Stock Status</span>
+                                </label>
+                                <input defaultValue={craftItem.stockStatus} type="text"  {...register("stockStatus")} placeholder="Stock Status" className="input input-bordered" required />
+                            </div>
+                        </div>
+
 
 
                         <div className="form-control mt-6">
