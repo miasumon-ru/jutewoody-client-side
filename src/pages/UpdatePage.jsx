@@ -49,6 +49,10 @@ const UpdatePage = () => {
 
     return (
         <div className="">
+
+            
+
+
             <div className="flex-col ">
                 <div className="text-center lg:text-left">
                     <h1 className="text-5xl font-bold text-center my-10"> Update Craft Item </h1>
