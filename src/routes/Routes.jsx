@@ -11,6 +11,7 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import PrivateRoutes from "./PrivateRoutes";
 import ViewDetails from "../pages/ViewDetails";
+import ViewDetailsAll from "../pages/ViewDetailsAll";
 
 
 const router = createBrowserRouter([
@@ -27,7 +28,8 @@ const router = createBrowserRouter([
       },
       {
         path: "/craftsAll",
-        element: <CraftsAll></CraftsAll>
+        element: <CraftsAll></CraftsAll>,
+        loader : () => fetch("http://localhost:5000/craftsAll")
       },
       {
         path: "/craftsAdd",
@@ -53,7 +55,15 @@ const router = createBrowserRouter([
         path: "/viewDetails/:id",
         element: <ViewDetails></ViewDetails>,
         loader: ({params}) => fetch(`http://localhost:5000/viewDetails/${params.id}`)
-      }
+      },
+      {
+        path: "/viewDetailsAll/:id",
+        element: <PrivateRoutes> 
+                     <ViewDetailsAll></ViewDetailsAll>
+                  </PrivateRoutes>,
+        loader: ({params}) => fetch(`http://localhost:5000/viewDetails/${params.id}`)
+      },
+  
 
 
     ],
