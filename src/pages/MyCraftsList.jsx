@@ -1,10 +1,32 @@
+import { useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 
  
  const MyCraftsList = () => {
-    const myLists = useLoaderData()
+    const LoadedMyLists = useLoaderData()
+
+    const [myLists, setMyLists] = useState(LoadedMyLists)
 
     console.log(myLists)
+
+    // handleDelete
+
+    const handleDelete = (_id) => {
+
+        console.log("delete this id", _id)
+
+        fetch(`http://localhost:5000/deleteCraftItem/${_id}`, {
+            method : "DELETE"
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+
+            const remaining = myLists.filter(list => list._id !== _id)
+            setMyLists(remaining)
+        } )
+
+    }
     return (
         <div>
    
@@ -39,7 +61,7 @@ import { Link, useLoaderData } from "react-router-dom";
 
                             <Link className="w-full" to={`/updatePage/${list._id}`} > <button className="btn  w-full" > Update </button> </Link>
 
-                            <Link className="w-full"> <button className="btn  w-full" > Delete </button> </Link>
+                             <button onClick={()=> handleDelete(list._id)} className="btn  w-full" > Delete </button> 
          
                         </div>
                     </div>
