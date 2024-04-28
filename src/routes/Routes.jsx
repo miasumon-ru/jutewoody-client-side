@@ -38,10 +38,11 @@ const router = createBrowserRouter([
                  </PrivateRoutes>
       },
       {
-        path: "/myCraftsList",
+        path: "/myCraftsList/:email",
         element: <PrivateRoutes>
                      <MyCraftsList></MyCraftsList>
-                 </PrivateRoutes>
+                 </PrivateRoutes>,
+        loader : ({params}) => fetch(`http://localhost:5000/myLists/${params.email}`)         
       },
       {
         path: "/login",

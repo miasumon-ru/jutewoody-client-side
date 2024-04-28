@@ -3,7 +3,7 @@ import { useLoaderData } from "react-router-dom";
 const ViewDetailsAll = () => {
     const craftItem = useLoaderData()
 
-    const { photoURL, itemName, subCategoryName, shortDescription, price, rating, customization, processingTime, stockStatus } = craftItem
+    const { photoURL, itemName, subCategoryName, shortDescription, price, rating, customization, processingTime, stockStatus, userName, userEmail } = craftItem
 
     return (
         <div>
@@ -43,11 +43,13 @@ const ViewDetailsAll = () => {
 
                         <div className="border border-gray-200"></div>
 
-
-
-
-
                         <p className="text-[18px] font-bold text-[#6b645d]"> Processing Time :  {processingTime} </p>
+                        <div className="border border-gray-200"></div>
+
+                        <p className="text-[18px] font-bold text-[#6b645d]"> User Name :  {userName} </p>
+                        <div className="border border-gray-200"></div>
+
+                        <p className="text-[18px] font-bold text-[#6b645d]"> User Email :  {userEmail} </p>
 
 
 

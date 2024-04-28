@@ -29,7 +29,7 @@ const ViewDetails = () => {
 
                     <div className="space-y-2 mt-6">
 
-                        <p className="text-[18px] font-bold text-[#6b645d]"> Price :  {price} </p>
+                        <p className="text-[18px] font-bold text-[#6b645d] " > Price :  {price} </p>
    
                         <div className="border border-gray-200"></div>
 

@@ -85,7 +85,7 @@ const Navbar = () => {
             }}
 
 
-            to={'/myCraftsList'}> My Art & Craft List </NavLink></li>
+            to={`/myCraftsList/${user?.email}`}> My Art & Craft List </NavLink></li>
 
         <li className="font-semibold mr-2"> <NavLink
 
