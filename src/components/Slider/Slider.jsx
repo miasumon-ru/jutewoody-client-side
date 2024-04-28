@@ -20,6 +20,7 @@ import juteHanging from '../../assets/jute_hangings.jpeg'
 // import woodDesk from '../../assets/wood_desk.jpg'
 import woodNecklace from '../../assets/wood_necklace.jpeg'
 import woodSpoon from '../../assets/wood_spoon.jpeg'
+import { Link } from 'react-router-dom';
 
 
 
@@ -32,7 +33,7 @@ const Slider = () => {
             spaceBetween={30}
             centeredSlides={true}
             autoplay={{
-                delay: 2500,
+                delay: 250000,
                 disableOnInteraction: false,
             }}
             pagination={{
@@ -42,47 +43,97 @@ const Slider = () => {
             modules={[Autoplay, Pagination, Navigation]}
             className="mySwiper"
         >
-            <SwiperSlide className=''>
+            <SwiperSlide className='relative' >
 
                 <div>
                     <img src={juteEarings} alt="" />
                 </div>
 
-            </SwiperSlide>
+                <div className='absolute'>
+                    <p className=' text-2xl md:text-6xl text-gray-200 font-bold '>
+                        Explore the Rustic <br /> Charm of JuteWoody
+                    </p>
 
-            <SwiperSlide>
-                <div>
-                    <img src={juteHanging} alt="" />
+                    <Link to={"/craftsAll"}>
+                        <button className='btn mt-10 '> View All </button>
+                    </Link>
                 </div>
+
             </SwiperSlide>
 
-            <SwiperSlide>
+            <SwiperSlide className='relative'>
+
                 <div>
                     <img src={juteBag} alt="" />
                 </div>
+
+                <div className='absolute'>
+                    <p className=' text-2xl md:text-6xl text-gray-200 font-bold '>
+                        Explore the Rustic <br /> Charm of JuteWoody
+                    </p>
+
+                    <Link to={"/craftsAll"}>
+                        <button className='btn mt-10 '> View All </button>
+                    </Link>
+                </div>
+
             </SwiperSlide>
 
-            <SwiperSlide>
+            <SwiperSlide className='relative'>
+
+                <div>
+                    <img src={juteHanging} alt="" />
+                </div>
+
+                <div className='absolute'>
+                    <p className=' text-2xl md:text-6xl text-gray-200 font-bold '>
+                        Explore the Rustic <br /> Charm of JuteWoody
+                    </p>
+
+                    <Link to={"/craftsAll"}>
+                        <button className='btn mt-10 '> View All </button>
+                    </Link>
+                </div>
+
+            </SwiperSlide>
+
+            <SwiperSlide className='relative'>
+
                 <div>
                     <img src={woodNecklace} alt="" />
                 </div>
+
+                <div className='absolute'>
+                    <p className=' text-2xl md:text-6xl text-gray-300 font-bold '>
+                        Explore the Rustic <br /> Charm of JuteWoody
+                    </p>
+
+                    <Link to={"/craftsAll"}>
+                        <button className='btn mt-10 '> View All </button>
+                    </Link>
+                </div>
+
             </SwiperSlide>
 
-            <SwiperSlide>
+            <SwiperSlide className='relative'>
+
                 <div>
                     <img src={woodSpoon} alt="" />
                 </div>
+
+                <div className='absolute'>
+                    <p className=' text-2xl md:text-6xl text-gray-200 font-bold '>
+                        Explore the Rustic <br /> Charm of JuteWoody
+                    </p>
+
+                    <Link to={"/craftsAll"}>
+                        <button className='btn mt-10 '> View All </button>
+                    </Link>
+                </div>
+
             </SwiperSlide>
 
-            {/* <SwiperSlide>
-                <div>
-                    <img src={woodDesk} alt="" />
-                </div>
-            </SwiperSlide> */}
 
-            {/* <SwiperSlide>Slide 7</SwiperSlide>
-            <SwiperSlide>Slide 8</SwiperSlide>
-            <SwiperSlide>Slide 9</SwiperSlide> */}
         </Swiper>
 
 
