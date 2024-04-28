@@ -12,6 +12,7 @@ import Register from "../pages/Register";
 import PrivateRoutes from "./PrivateRoutes";
 import ViewDetails from "../pages/ViewDetails";
 import ViewDetailsAll from "../pages/ViewDetailsAll";
+import UpdatePage from "../pages/UpdatePage";
 
 
 const router = createBrowserRouter([
@@ -51,6 +52,11 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>
+      },
+      {
+        path: "/updatePage/:id",
+        element: <UpdatePage></UpdatePage>,
+        loader : ({params}) => fetch(`http://localhost:5000/updatePage/${params.id}`)
       },
       {
         path: "/viewDetails/:id",

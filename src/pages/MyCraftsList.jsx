@@ -7,12 +7,9 @@ import { Link, useLoaderData } from "react-router-dom";
     console.log(myLists)
     return (
         <div>
+   
 
-            <div className="max-w-96 mx-auto">
-                <h1 className="text-4xl">My Craft Lists </h1>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
                 {
                     myLists.map(list =><div key={list._id} className="card  bg-base-100 shadow-md">
                     <figure><img src={list.photoURL} alt="CraftItems image" /></figure>
@@ -40,7 +37,7 @@ import { Link, useLoaderData } from "react-router-dom";
                       
                         <div className="card-actions mt-4 flex flex-col w-full ">
 
-                            <Link className="w-full" > <button className="btn  w-full" > Update </button> </Link>
+                            <Link className="w-full" to={`/updatePage/${list._id}`} > <button className="btn  w-full" > Update </button> </Link>
 
                             <Link className="w-full"> <button className="btn  w-full" > Delete </button> </Link>
          
