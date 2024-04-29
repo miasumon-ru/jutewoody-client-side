@@ -26,10 +26,10 @@ const UpdatePage = () => {
     const handleUpdate = (data) => {
 
 
-        const { photoURL, itemName, price, rating, customization, stockStatus } = data
+        const { photoURL, itemName, price, rating, customization, stockStatus, subCategoryName, shortDescription, processingTime } = data
 
 
-        const newCraftItem = { photoURL, itemName, price, rating, customization, stockStatus, _id }
+        const newCraftItem = { photoURL, itemName, price, rating, customization, stockStatus, _id, subCategoryName, shortDescription, processingTime }
 
         console.log(newCraftItem)
 
