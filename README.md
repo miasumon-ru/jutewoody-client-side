@@ -7,7 +7,7 @@ It is a website related to the crafted products like Jute and Wood.
 Curated collection of eco-friendly bags, home decor, and accessories, crafted with care to blend functionality with nature-inspired designs
 
 
-live link : 
+live link : https://assignment-ten-client-si-56d22.web.app/
 
 
 
