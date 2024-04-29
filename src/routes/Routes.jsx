@@ -13,6 +13,7 @@ import PrivateRoutes from "./PrivateRoutes";
 import ViewDetails from "../pages/ViewDetails";
 import ViewDetailsAll from "../pages/ViewDetailsAll";
 import UpdatePage from "../pages/UpdatePage";
+import SubCategoryNameAll from "../pages/SubCategoryNameAll";
 
 
 const router = createBrowserRouter([
@@ -52,6 +53,11 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>
+      },
+      {
+        path: "/subCategoryNameAll/:subCategoryName",
+        element: <SubCategoryNameAll></SubCategoryNameAll>
+   
       },
       {
         path: "/updatePage/:id",

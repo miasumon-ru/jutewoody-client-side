@@ -3,6 +3,7 @@ import Slider from "../components/Slider/Slider";
 import CraftItem from "../components/CraftItem/CraftItem";
 import Testimonial from "../components/Testimonial/Testimonial";
 import Accordion from "../components/Accordion/Accordion";
+import Categories from "../components/Categories/Categories";
 
 
 
@@ -52,6 +53,10 @@ const Home = () => {
 
             <div>
                 <Accordion></Accordion>
+            </div>
+
+            <div>
+                <Categories></Categories>
             </div>
 
             
