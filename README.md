@@ -1,8 +1,35 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# JuteWoody
+
+It is a website related to the crafted products like Jute and Wood.
+Curated collection of eco-friendly bags, home decor, and accessories, crafted with care to blend functionality with nature-inspired designs
+
+
+live link : 
+
+
+
+
+## Features
+
+- Dark and Night mode functionality
+- CRUD operation has been implemented 
+- Responsive on desktop, tablet and mobile phones
+- Gorgeous sliders with meaningful information 
+- Environment variables have been used to protect the firebase key and dotEnv variables to protect the mongodb credentials of the database from general people
+- Dynamic routes and  private routes are implemented
+- Firebase is  used to create user and login with email and password and therefore login with Google and Github
+- Jute & wooden Crafts
+
+
+
+## Npm Packages
+
+1. React Tooltip => This package is used in the navbar section to see the displayName of the logged user on Hover in user Image
+
+2. React Simple Typewriter => It has been implemented in the slider to animate certain words with infinity loops
+
+3. Swiper Js => Swiper js is another amazing npm package which deals with different sliders 
+
