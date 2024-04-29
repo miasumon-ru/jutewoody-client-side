@@ -2,6 +2,10 @@ import { useContext } from "react";
 import { useForm } from "react-hook-form"
 import { AuthContext } from "../providers/AuthProvider";
 
+
+import Swal from 'sweetalert2'
+
+
 // image links
 
 /**
@@ -56,9 +60,22 @@ const CraftsAdd = () => {
             body : JSON.stringify(newCraftItem)
         })
         .then(res => res.json())
-        .then(data => console.log(data))
+        .then(data => {
+            if(data.insertedId){
+                Swal.fire({
+                    title: 'Success !!',
+                    text: 'Successfully Added The Craft',
+                    icon: 'success',
+                    confirmButtonText: 'Close'
+                  })
+            
+            }
+        })
 
     }
+
+
+ 
 
 
 

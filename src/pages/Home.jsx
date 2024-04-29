@@ -6,9 +6,16 @@ import Accordion from "../components/Accordion/Accordion";
 
 
 
+
+
+
 const Home = () => {
 
     const craftItems = useLoaderData()
+
+
+
+    
 
 
     return (
@@ -28,7 +35,7 @@ const Home = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-10">
                     {
-                        craftItems.map(craftItem => <CraftItem craftItem={craftItem} key={craftItem._id}></CraftItem>)
+                        craftItems.slice(0,6).map(craftItem => <CraftItem craftItem={craftItem} key={craftItem._id}></CraftItem>)
                     }
                 </div>
             </div>
@@ -46,6 +53,8 @@ const Home = () => {
             <div>
                 <Accordion></Accordion>
             </div>
+
+            
 
 
 
