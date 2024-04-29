@@ -2,6 +2,10 @@ import { useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 
 
+import Swal from 'sweetalert2'
+
+
+
 const MyCraftsList = () => {
     const LoadedMyLists = useLoaderData()
 
@@ -10,7 +14,7 @@ const MyCraftsList = () => {
     const [all, setAll] = useState(LoadedMyLists)
 
     const [displayShow, setDisplayShow] = useState(LoadedMyLists)
-   
+
 
     console.log(myLists)
 
@@ -18,30 +22,68 @@ const MyCraftsList = () => {
 
     const handleDelete = (_id) => {
 
-        console.log("delete this id", _id)
+   
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
 
-        fetch(`http://localhost:5000/deleteCraftItem/${_id}`, {
-            method: "DELETE"
-        })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data)
 
-                const remaining = myLists.filter(list => list._id !== _id)
-                
-                setMyLists(remaining)
-                setDisplayShow(remaining)
+                fetch(`http://localhost:5000/deleteCraftItem/${_id}`, {
+                    method: "DELETE"
+                })
+                .then(res => res.json())
+                .then(data => {
 
-            })
+                        if (data.deletedCount > 0) {
+
+                            Swal.fire({
+                                title: "Deleted!",
+                                text: "Your CraftItem has been deleted.",
+                                icon: "success"
+                            });
+
+                            const remaining = myLists.filter(list => list._id !== _id)
+
+                            setMyLists(remaining)
+                            setDisplayShow(remaining)
+
+                        }
+
+
+
+                    })
+
+
+
+
+            }
+        });
+
+
+
+
+
+
+
 
     }
+
+    // delete confirmation
+
 
     // handle Customization
 
     const handleYes = () => {
 
         const customized = customization.filter(list => list.customization === "Yes")
-             
+
         setDisplayShow(customized)
 
     }
@@ -50,8 +92,8 @@ const MyCraftsList = () => {
     const handleNo = () => {
 
         const customized = customization.filter(list => list.customization === "No")
-         
-        
+
+
         setDisplayShow(customized)
 
     }
@@ -63,7 +105,7 @@ const MyCraftsList = () => {
         const allCrafts = all.filter(list => list.customization === "Yes" || "No")
 
         setDisplayShow(allCrafts)
-    
+
 
     }
 
@@ -79,7 +121,7 @@ const MyCraftsList = () => {
                         <li className="btn mb-2" onClick={handleYes}> Yes </li>
                         <li className="btn mb-2" onClick={handleNo}> No </li>
                         <li className="btn" onClick={handleBoth}> Both </li>
-                      
+
 
                     </ul>
                 </div>
