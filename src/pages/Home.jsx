@@ -41,6 +41,12 @@ const Home = () => {
                 </div>
             </div>
 
+            {/* Categories Section */}
+
+            <div>
+                <Categories></Categories>
+            </div>
+
 
             {/* Testimonial Section */}
 
@@ -55,9 +61,7 @@ const Home = () => {
                 <Accordion></Accordion>
             </div>
 
-            <div>
-                <Categories></Categories>
-            </div>
+
 
             
 

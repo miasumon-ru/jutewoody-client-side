@@ -20,7 +20,7 @@ const Categories = () => {
 
     useEffect(() => {
 
-        fetch("http://localhost:5000/categories")
+        fetch("https://assignment-ten-server-side-peach.vercel.app/categories")
             .then(res => res.json())
             .then(data => setCategories(data))
 
