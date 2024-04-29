@@ -35,7 +35,7 @@ const UpdatePage = () => {
 
         // fetch the addCraftItem Api
 
-        fetch("http://localhost:5000/updatePage", {
+        fetch("https://assignment-ten-server-side-peach.vercel.app/updatePage", {
             method: "PUT",
             headers: {
                 "content-type": "application/json"

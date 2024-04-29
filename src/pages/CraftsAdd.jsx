@@ -52,7 +52,7 @@ const CraftsAdd = () => {
 
         // fetch the addCratItem Api
 
-        fetch("http://localhost:5000/addCraftItem", {
+        fetch("https://assignment-ten-server-side-peach.vercel.app/addCraftItem", {
             method: "POST",
             headers : {
                 "content-type" : "application/json"

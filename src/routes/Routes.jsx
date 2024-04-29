@@ -25,12 +25,12 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader : () => fetch("http://localhost:5000/craftItems")
+        loader : () => fetch("https://assignment-ten-server-side-peach.vercel.app/craftItems")
       },
       {
         path: "/craftsAll",
         element: <CraftsAll></CraftsAll>,
-        loader : () => fetch("http://localhost:5000/craftsAll")
+        loader : () => fetch("https://assignment-ten-server-side-peach.vercel.app/craftsAll")
       },
       {
         path: "/craftsAdd",
@@ -43,7 +43,7 @@ const router = createBrowserRouter([
         element: <PrivateRoutes>
                      <MyCraftsList></MyCraftsList>
                  </PrivateRoutes>,
-        loader : ({params}) => fetch(`http://localhost:5000/myLists/${params.email}`)         
+        loader : ({params}) => fetch(`https://assignment-ten-server-side-peach.vercel.app/myLists/${params.email}`)         
       },
       {
         path: "/login",
@@ -56,19 +56,19 @@ const router = createBrowserRouter([
       {
         path: "/updatePage/:id",
         element: <UpdatePage></UpdatePage>,
-        loader : ({params}) => fetch(`http://localhost:5000/updatePage/${params.id}`)
+        loader : ({params}) => fetch(`https://assignment-ten-server-side-peach.vercel.app/updatePage/${params.id}`)
       },
       {
         path: "/viewDetails/:id",
         element: <ViewDetails></ViewDetails>,
-        loader: ({params}) => fetch(`http://localhost:5000/viewDetails/${params.id}`)
+        loader: ({params}) => fetch(`https://assignment-ten-server-side-peach.vercel.app/viewDetails/${params.id}`)
       },
       {
         path: "/viewDetailsAll/:id",
         element: <PrivateRoutes> 
                      <ViewDetailsAll></ViewDetailsAll>
                   </PrivateRoutes>,
-        loader: ({params}) => fetch(`http://localhost:5000/viewDetails/${params.id}`)
+        loader: ({params}) => fetch(`https://assignment-ten-server-side-peach.vercel.app/viewDetails/${params.id}`)
       },
   
 

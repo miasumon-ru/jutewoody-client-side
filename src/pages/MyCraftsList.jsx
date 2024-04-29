@@ -35,7 +35,7 @@ const MyCraftsList = () => {
             if (result.isConfirmed) {
 
 
-                fetch(`http://localhost:5000/deleteCraftItem/${_id}`, {
+                fetch(`https://assignment-ten-server-side-peach.vercel.app/deleteCraftItem/${_id}`, {
                     method: "DELETE"
                 })
                 .then(res => res.json())
