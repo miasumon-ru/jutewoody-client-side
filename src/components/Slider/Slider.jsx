@@ -36,7 +36,7 @@ const Slider = () => {
             spaceBetween={30}
             centeredSlides={true}
             autoplay={{
-                delay: 250000,
+                delay: 3000,
                 disableOnInteraction: false,
             }}
             pagination={{
@@ -49,7 +49,7 @@ const Slider = () => {
             <SwiperSlide className='relative' >
 
                 <div>
-                    <img src={juteEarings} alt="" />
+                    <img className='rounded-lg' src={juteEarings} alt="" />
                 </div>
 
                 <div className='absolute'>
@@ -85,7 +85,7 @@ const Slider = () => {
             <SwiperSlide className='relative'>
 
                 <div>
-                    <img src={juteBag} alt="" />
+                    <img className='rounded-lg' src={juteBag} alt="" />
                 </div>
 
                 <div className='absolute'>
@@ -120,7 +120,7 @@ const Slider = () => {
             <SwiperSlide className='relative'>
 
                 <div>
-                    <img src={juteHanging} alt="" />
+                    <img className='rounded-lg' src={juteHanging} alt="" />
                 </div>
 
                 <div className='absolute'>
@@ -155,7 +155,7 @@ const Slider = () => {
             <SwiperSlide className='relative'>
 
                 <div>
-                    <img src={woodNecklace} alt="" />
+                    <img className='rounded-lg' src={woodNecklace} alt="" />
                 </div>
 
                 <div className='absolute'>
@@ -191,7 +191,7 @@ const Slider = () => {
             <SwiperSlide className='relative'>
 
                 <div>
-                    <img src={woodSpoon} alt="" />
+                    <img className='rounded-lg' src={woodSpoon} alt="" />
                 </div>
 
                 <div className='absolute'>

@@ -9,15 +9,17 @@ import { Link } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 
+import { Helmet } from "react-helmet";
+
 
 
 const Login = () => {
 
     // from AuthProvider
 
-    const {signIn, loginWithGoogle, loginWithGithub} = useContext(AuthContext)
+    const { signIn, loginWithGoogle, loginWithGithub } = useContext(AuthContext)
 
-    
+
 
     // from react hook form
 
@@ -25,31 +27,31 @@ const Login = () => {
         register,
         handleSubmit
 
-      } = useForm()
+    } = useForm()
 
     //   handle Login
 
     const handleLogin = (data, e) => {
 
-        const {email, password} = data
+        const { email, password } = data
 
         console.log(email, password)
 
         // signIn
 
         signIn(email, password)
-        .then(result => {
-            console.log(result.user)
+            .then(result => {
+                console.log(result.user)
 
-            toast.success("Login is successful")
+                toast.success("Login is successful")
 
-            e.target.reset()
-        })
-        .catch(() => {
+                e.target.reset()
+            })
+            .catch(() => {
 
-            toast.error("Please provide correct Email and Password")
-            
-        })
+                toast.error("Please provide correct Email and Password")
+
+            })
 
     }
 
@@ -58,14 +60,14 @@ const Login = () => {
     const handleGoogleLogin = () => {
 
         loginWithGoogle()
-        .then(result => {
-            console.log(result.user)
+            .then(result => {
+                console.log(result.user)
 
-            toast.success("Login is successful")
-        })
-        .catch(error => {
-            console.log(error.message)
-        })
+                toast.success("Login is successful")
+            })
+            .catch(error => {
+                console.log(error.message)
+            })
 
 
 
@@ -76,24 +78,29 @@ const Login = () => {
 
     const handleGithubLogin = () => {
         loginWithGithub()
-        .then(result => {
-            console.log(result.user)
-            toast.success("Login is successful")
-        })
-        .catch(error => {
-            console.log(error.message)
-        })
+            .then(result => {
+                console.log(result.user)
+                toast.success("Login is successful")
+            })
+            .catch(error => {
+                console.log(error.message)
+            })
     }
 
- 
+
 
     return (
         <div className="hero min-h-screen  ">
+
+            <Helmet>
+                <title> Login | JuteWoody </title>
+            </Helmet>
+
             <div className="hero-content flex-col  ">
                 <div className="text-center lg:text-left">
                     <h1 className="text-5xl font-bold mb-10">Login now</h1>
 
-                 
+
                 </div>
                 <div className="card shrink-0 w-full max-w-sm border bg-base-100">
 
@@ -109,7 +116,7 @@ const Login = () => {
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input type="password" {...register("password")} placeholder="Password" className="input input-bordered" required />                
+                            <input type="password" {...register("password")} placeholder="Password" className="input input-bordered" required />
 
                         </div>
                         <div className="form-control mt-6">
@@ -118,7 +125,7 @@ const Login = () => {
 
                         <div className="my-6">
 
-                            
+
 
                             <p onClick={handleGoogleLogin} className="btn bg-[#f8f7f4] hover:bg-[#efebde] mb-2 w-full"> <FaGoogle className="text-xl mr-2" /> Sign In with Google  </p>
 

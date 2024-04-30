@@ -3,7 +3,7 @@ import { Link, useLoaderData } from "react-router-dom";
 
 
 import Swal from 'sweetalert2'
-
+import {Helmet} from "react-helmet";
 
 
 const MyCraftsList = () => {
@@ -107,6 +107,10 @@ const MyCraftsList = () => {
         <div>
 
             <div className="text-center my-10">
+
+            <Helmet>
+                <title> MyCraftList | JuteWoody </title>
+            </Helmet>
 
                 <div className="dropdown ">
                     <div tabIndex={0} role="button" className="btn m-1"> Customization </div>

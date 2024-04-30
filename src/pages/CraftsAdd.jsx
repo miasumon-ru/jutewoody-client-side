@@ -2,6 +2,8 @@ import { useContext } from "react";
 import { useForm } from "react-hook-form"
 import { AuthContext } from "../providers/AuthProvider";
 
+import {Helmet} from "react-helmet";
+
 
 import Swal from 'sweetalert2'
 
@@ -82,6 +84,11 @@ const CraftsAdd = () => {
     return (
 
         <div className="">
+
+            <Helmet>
+                <title> CraftAdd | JuteWoody </title>
+            </Helmet>
+
             <div className="flex-col ">
                 <div className="text-center lg:text-left">
                     <h1 className="text-5xl font-bold text-center my-10"> Add Craft Item </h1>

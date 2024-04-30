@@ -1,5 +1,7 @@
 import { Link, useLoaderData } from "react-router-dom";
 
+import { Helmet } from "react-helmet";
+
 
 
 const CraftsAll = () => {
@@ -8,6 +10,11 @@ const CraftsAll = () => {
     console.log(craftsAll)
     return (
         <div className="overflow-x-auto my-10  font-bold">
+
+            <Helmet>
+                <title> CraftAll | JuteWoody </title>
+            </Helmet>
+
             <table className="table">
                 {/* head */}
                 <thead>
@@ -24,7 +31,7 @@ const CraftsAll = () => {
                     {/* row 1 */}
 
                     {
-                        craftsAll.map((craft,index) => <tr key={craft._id}>
+                        craftsAll.map((craft, index) => <tr key={craft._id}>
                             <th> {index + 1} </th>
                             <td> {craft.itemName} </td>
                             <td> {craft.subCategoryName} </td>

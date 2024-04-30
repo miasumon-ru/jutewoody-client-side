@@ -1,5 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 
+import { Helmet } from "react-helmet";
+
 const ViewDetailsAll = () => {
     const craftItem = useLoaderData()
 
@@ -7,6 +9,10 @@ const ViewDetailsAll = () => {
 
     return (
         <div>
+
+            <Helmet>
+                <title> ViewDetailsAll | JuteWoody </title>
+            </Helmet>
             <div className="grid grid-cols-1 lg:grid-cols-7 gap-4 md:my-8 lg:my-12">
                 <div className="col-span-4 flex justify-center items-center  w-full p-5">
 

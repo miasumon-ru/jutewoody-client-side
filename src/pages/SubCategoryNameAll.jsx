@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
+import { Helmet } from "react-helmet";
+
 
 const SubCategoryNameAll = () => {
 
@@ -16,11 +18,15 @@ const SubCategoryNameAll = () => {
 
     }, [subCategoryName])
 
-  
+
     return (
         <div>
 
-          
+            <Helmet>
+                <title> SubCategoryName | JuteWoody </title>
+            </Helmet>
+
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-10" >
 
                 {

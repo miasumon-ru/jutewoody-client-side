@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form"
 import { useLoaderData } from "react-router-dom";
 
 import Swal from 'sweetalert2'
-
+import { Helmet } from "react-helmet";
 
 const UpdatePage = () => {
 
@@ -42,20 +42,20 @@ const UpdatePage = () => {
             },
             body: JSON.stringify(newCraftItem)
         })
-        .then(res => res.json())
-        .then(data =>{
-            if(data.modifiedCount > 0) {
+            .then(res => res.json())
+            .then(data => {
+                if (data.modifiedCount > 0) {
 
-                Swal.fire({
-                    title: 'Success !!',
-                    text: 'The Craft has been Updated successfully',
-                    icon: 'success',
-                    confirmButtonText: 'Close'
-                  })
+                    Swal.fire({
+                        title: 'Success !!',
+                        text: 'The Craft has been Updated successfully',
+                        icon: 'success',
+                        confirmButtonText: 'Close'
+                    })
 
-            }
-        })
-          
+                }
+            })
+
 
     }
 
@@ -63,7 +63,11 @@ const UpdatePage = () => {
     return (
         <div className="">
 
-            
+            <Helmet>
+                <title> UpdatePage | JuteWoody </title>
+            </Helmet>
+
+
 
 
             <div className="flex-col ">

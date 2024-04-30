@@ -1,5 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 
+import { Helmet } from "react-helmet";
+
 
 
 const ViewDetails = () => {
@@ -10,6 +12,10 @@ const ViewDetails = () => {
 
     return (
         <div>
+
+            <Helmet>
+                <title> ViewDetails | JuteWoody </title>
+            </Helmet>
 
             <div className="grid grid-cols-1 lg:grid-cols-7 gap-4 md:my-8 lg:my-12">
                 <div className="col-span-4 flex justify-center items-center  w-full p-5">
@@ -30,7 +36,7 @@ const ViewDetails = () => {
                     <div className="space-y-2 mt-6">
 
                         <p className="text-[18px] font-bold text-[#6b645d] " > Price :  {price} </p>
-   
+
                         <div className="border border-gray-200"></div>
 
                         <p className="text-[18px] font-bold text-[#6b645d]"> Ratings :  {rating} </p>

@@ -7,6 +7,21 @@
  * https://i.postimg.cc/05JWRDx1/jute-bags.jpg
  * https://i.postimg.cc/15hW9X5n/jute-earrings.jpg
  * 
+ * 
+ * https://i.postimg.cc/Fsz3nDWx/jute-bracelets.jpg
+ * https://i.postimg.cc/W1nDNZH4/jute-planters.jpg
+ * https://i.postimg.cc/3wxkdwsF/wooden-statue.jpg
+ * https://i.postimg.cc/ZqdLsVqQ/traditional-wooden-sofa.jpg
+ * https://i.postimg.cc/v8Vc1kNk/wooden-bracelets.jpg
+ * https://i.postimg.cc/hPRhVMFj/wooden-ladles.jpg
+ * https://i.postimg.cc/y8Vdbd8C/jute-fruit-basket.jpg
+ * https://i.postimg.cc/d0fV3jmJ/jute-placemats.jpg
+ * https://i.postimg.cc/B61QKPMH/jute-cushion-sofa.jpg
+ * https://i.postimg.cc/2yRjFjKJ/jute-curatains.jpg
+ * https://i.postimg.cc/Vvqf7QyN/wooden-shelves.jpg
+ * https://i.postimg.cc/xjM1jHkS/wooden-platter.jpg
+ * 
+ * 
  */
 
 import { useEffect, useState } from "react";

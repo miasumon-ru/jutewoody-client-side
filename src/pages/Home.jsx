@@ -4,6 +4,7 @@ import CraftItem from "../components/CraftItem/CraftItem";
 import Testimonial from "../components/Testimonial/Testimonial";
 import Accordion from "../components/Accordion/Accordion";
 import Categories from "../components/Categories/Categories";
+import { Helmet } from "react-helmet";
 
 
 
@@ -16,11 +17,15 @@ const Home = () => {
 
 
 
-    
+
 
 
     return (
         <div className="mt-10">
+
+            <Helmet>
+                <title> Home | JuteWoody </title>
+            </Helmet>
 
             <Slider></Slider>
 
@@ -36,7 +41,7 @@ const Home = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-10">
                     {
-                        craftItems.slice(0,6).map(craftItem => <CraftItem craftItem={craftItem} key={craftItem._id}></CraftItem>)
+                        craftItems.slice(0, 6).map(craftItem => <CraftItem craftItem={craftItem} key={craftItem._id}></CraftItem>)
                     }
                 </div>
             </div>
@@ -63,7 +68,7 @@ const Home = () => {
 
 
 
-            
+
 
 
 
