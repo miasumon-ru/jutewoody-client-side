@@ -71,7 +71,7 @@ const Navbar = () => {
                 return {
 
                     fontWeight: isActive ? "bold" : "",
-                    background: isActive ? "green" : "",
+                    background: isActive ? "#565264" : "",
                     color: isActive && "white"
 
 
@@ -86,7 +86,7 @@ const Navbar = () => {
             style={({ isActive }) => {
                 return {
                     fontWeight: isActive ? "bold" : "",
-                    background: isActive ? "green" : "",
+                    background: isActive ? "#565264" : "",
                     color: isActive && "white"
 
                 }
@@ -102,7 +102,7 @@ const Navbar = () => {
             style={({ isActive }) => {
                 return {
                     fontWeight: isActive ? "bold" : "",
-                    background: isActive ? "green" : "",
+                    background: isActive ? "#565264" : "",
                     color: isActive && "white"
                 }
 
@@ -116,7 +116,7 @@ const Navbar = () => {
             style={({ isActive }) => {
                 return {
                     fontWeight: isActive ? "bold" : "",
-                    background: isActive ? "green" : "",
+                    background: isActive ? "#565264" : "",
                     color: isActive && "white"
                 }
 
@@ -130,7 +130,7 @@ const Navbar = () => {
             style={({ isActive }) => {
                 return {
                     fontWeight: isActive ? "bold" : "",
-                    background: isActive ? "green" : "",
+                    background: isActive ? "#565264" : "",
                     color: isActive && "white"
                 }
 
@@ -189,7 +189,7 @@ const Navbar = () => {
                             </a>
 
 
-                            <button onClick={handleLogOut} className="btn btn-primary"> LogOut </button>
+                            <button onClick={handleLogOut} className="btn bg-[#565264] hover:bg-[#393644] text-white "> LogOut </button>
                         </div>
 
                         :
@@ -200,7 +200,7 @@ const Navbar = () => {
                                 loading ? <span className="loading loading-spinner loading-lg"></span>
                                     :
                                     <Link to={'/login'}>
-                                        <button className="btn btn-primary">
+                                        <button className="btn bg-[#565264] text-white hover:bg-[#393644]">
                                             Login
                                         </button>
                                     </Link>

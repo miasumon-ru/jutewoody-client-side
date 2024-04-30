@@ -55,7 +55,7 @@ const SubCategoryNameAll = () => {
 
                             <div className="card-actions mt-4 flex flex-col w-full ">
 
-                                <Link className="w-full" to={`/viewDetails/${subCategoryName._id}`} > <button className="btn  w-full" > ViewDetails </button> </Link>
+                                <Link className="w-full" to={`/viewDetails/${subCategoryName._id}`} > <button className="btn  w-full " > ViewDetails </button> </Link>
 
 
 

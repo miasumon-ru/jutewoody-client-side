@@ -37,7 +37,7 @@ const CraftsAll = () => {
                             <td> {craft.subCategoryName} </td>
                             <td> {craft.customization} </td>
                             <td> {craft.stockStatus} </td>
-                            <td> <Link to={`/viewDetailsAll/${craft._id}`} > <button className="btn btn-primary"> View Details </button> </Link> </td>
+                            <td> <Link to={`/viewDetailsAll/${craft._id}`} > <button className="btn bg-[#565264] hover:bg-[#393644] text-white "> View Details </button> </Link> </td>
                         </tr>)
                     }
 

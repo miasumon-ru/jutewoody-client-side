@@ -8,7 +8,7 @@ const Accordion = () => {
 
             <div className="max-w-lg mx-auto" >
 
-                <h1 className="text-4xl text-center mt-16 mb-8 font-bold">
+                <h1 className="text-4xl text-center mt-16 mb-12 font-bold">
 
                     <Zoom>
 

@@ -21,7 +21,7 @@ const CraftItem = ({ craftItem }) => {
                 <p className='my-2 font-semibold text-[#a2abad]'> {shortDescription} </p>
                 <div className="card-actions mt-4">
                     <Link className='w-full' to={`/viewDetails/${_id}`}>
-                        <button className="btn w-full btn-primary"> View Details </button>
+                        <button className="btn w-full bg-[#565264] hover:bg-[#393644] text-white"> View Details </button>
                     </Link>
                 </div>
             </div>

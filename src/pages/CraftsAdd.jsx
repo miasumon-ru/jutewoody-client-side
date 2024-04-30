@@ -190,7 +190,7 @@ const CraftsAdd = () => {
 
 
                         <div className="form-control mt-6">
-                            <button className="btn btn-primary">Add Craft Item</button>
+                            <button className="btn bg-[#565264] hover:bg-[#393644] text-white  ">Add Craft Item</button>
                         </div>
                     </form>
                 </div>
