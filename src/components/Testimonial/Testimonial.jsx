@@ -1,15 +1,31 @@
 import reviewImgOne from "../../assets/review_img1.jpg"
 import reviewImgTwo from "../../assets/review_img2.jpg"
 
+import { Zoom } from "react-awesome-reveal";
+
 
 const Testimonial = () => {
     return (
         <div>
 
             <div className="max-w-lg mx-auto" >
-                <h1 className="text-2xl text-center mt-16 mb-8 font-bold text-[#7c7c7d]"> Testimonial </h1>
+                <h1 className="text-2xl text-center mt-16 mb-8 font-bold text-[#7c7c7d]">
+                    <Zoom>
 
-                <h2 className="text-4xl font-bold text-center"> What out satisfied clients are saying ... </h2>
+                        Testimonial
+
+                    </Zoom>
+
+                </h1>
+
+                <h2 className="text-4xl font-bold text-center">
+
+                    <Zoom>
+                        What out satisfied clients are saying ...
+
+                    </Zoom>
+
+                </h2>
             </div>
 
 

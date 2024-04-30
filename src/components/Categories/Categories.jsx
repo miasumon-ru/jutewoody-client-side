@@ -26,6 +26,7 @@
 
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { Zoom } from "react-awesome-reveal";
 
 
 const Categories = () => {
@@ -45,10 +46,19 @@ const Categories = () => {
 
     return (
         <div>
-          
+
 
             <div className="max-w-lg mx-auto mb-10" >
-                <h1 className="text-4xl text-center mt-16 mb-8 font-bold"> Art & Craft Categories </h1>
+                <h1 className="text-4xl text-center mt-16 mb-8 font-bold">
+
+                    <Zoom>
+
+                        Art & Craft Categories
+
+                    </Zoom>
+
+
+                </h1>
 
                 <p className="max-w-lg text-center text-[16px] font-medium text-[#a2abad] ">   Explore a diverse array of handmade wonders crafted from natural jute fibers and wood.  </p>
             </div>

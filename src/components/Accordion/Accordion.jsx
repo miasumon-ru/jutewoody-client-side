@@ -1,4 +1,4 @@
-
+import { Zoom } from "react-awesome-reveal";
 
 const Accordion = () => {
 
@@ -8,7 +8,15 @@ const Accordion = () => {
 
             <div className="max-w-lg mx-auto" >
 
-                <h1 className="text-4xl text-center mt-16 mb-8 font-bold"> Frequently Asked Questions </h1>
+                <h1 className="text-4xl text-center mt-16 mb-8 font-bold">
+
+                    <Zoom>
+
+                        Frequently Asked Questions
+
+                    </Zoom>
+
+                </h1>
 
 
             </div>

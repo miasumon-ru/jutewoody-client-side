@@ -23,6 +23,8 @@ import woodNecklace from '../../assets/wood_necklace.jpeg'
 import woodSpoon from '../../assets/wood_spoon.jpeg'
 import { Link } from 'react-router-dom';
 
+import { Slide  } from "react-awesome-reveal";
+
 
 
 
@@ -36,7 +38,7 @@ const Slider = () => {
             spaceBetween={30}
             centeredSlides={true}
             autoplay={{
-                delay: 3000,
+                delay: 30000,
                 disableOnInteraction: false,
             }}
             pagination={{
@@ -56,12 +58,19 @@ const Slider = () => {
 
 
                     <p className=' text-2xl md:text-6xl text-gray-200 font-bold '>
-                        Explore The JuteWoody {''} <br />
+
+                        
+
+                        <Slide>
+                            <p> Explore The JuteWoody </p>
+                        </Slide >
+
+                        {''} <br />
 
                         <span className='text-green-200 font-bold'>
 
-                            <Typewriter 
-                                words={[ "Sustainable", "Eco-Friendly", "Organic", "Charming", 'Rustic' ]}
+                            <Typewriter
+                                words={["Sustainable", "Eco-Friendly", "Organic", "Charming", 'Rustic']}
                                 loop={0}
                                 cursor
                                 cursorStyle='_'
@@ -89,7 +98,7 @@ const Slider = () => {
                 </div>
 
                 <div className='absolute'>
-                <p className=' text-2xl md:text-6xl text-gray-200 font-bold '>
+                    <p className=' text-2xl md:text-6xl text-gray-200 font-bold '>
                         Explore The JuteWoody {''} <br />
 
                         <span className='text-green-200 font-bold'>
@@ -124,7 +133,7 @@ const Slider = () => {
                 </div>
 
                 <div className='absolute'>
-                <p className=' text-2xl md:text-6xl text-gray-200 font-bold '>
+                    <p className=' text-2xl md:text-6xl text-gray-200 font-bold '>
                         Explore The JuteWoody {''} <br />
 
                         <span className='text-green-200 font-bold'>
@@ -160,7 +169,7 @@ const Slider = () => {
 
                 <div className='absolute'>
 
-                <p className=' text-2xl md:text-6xl text-gray-200 font-bold '>
+                    <p className=' text-2xl md:text-6xl text-gray-200 font-bold '>
                         Explore The JuteWoody {''} <br />
 
                         <span className='text-green-200 font-bold'>
