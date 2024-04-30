@@ -25,7 +25,8 @@ const CraftsAdd = () => {
 
     // from AuthProvider
 
-    const {user} = useContext(AuthContext)
+    const {user, loading, setLoading} = useContext(AuthContext)
+
 
     const userEmail = user?.email
     const userName = user?.displayName || user?.reloadUserInfo?.providerUserInfo[0]?.screenName
@@ -38,6 +39,11 @@ const CraftsAdd = () => {
         handleSubmit
 
     } = useForm()
+
+    if(loading) {
+        
+        return <span className="loading loading-spinner loading-lg"></span>
+    }
 
 
     // handleAdd Craft
@@ -63,7 +69,10 @@ const CraftsAdd = () => {
         })
         .then(res => res.json())
         .then(data => {
+     
             if(data.insertedId){
+
+                setLoading(false)
                 Swal.fire({
                     title: 'Success !!',
                     text: 'Successfully Added The Craft',

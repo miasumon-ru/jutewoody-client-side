@@ -153,7 +153,7 @@ const Navbar = () => {
 
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-sm font-bold lg:text-xl bg-gradient-to-r from-[#5c566e] via-[#54b226] to-[#494d58] inline-block text-transparent bg-clip-text"> JuteWoody Crafts </a>
+                <a className="btn btn-ghost text-sm font-bold lg:text-xl bg-gradient-to-r from-[#5c566e] via-[#54b226] to-[#494d58] text-transparent bg-clip-text"> JuteWoody Crafts </a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 ">

@@ -91,6 +91,7 @@ const AuthProvider = ({children}) => {
         loginWithGithub,
         logOut,
         loading
+        
     }
 
     return (
