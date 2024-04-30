@@ -6,7 +6,7 @@ const Footer = () => {
         <footer className="footer footer-center p-10 bg-base-200 text-base-content rounded mt-10">
 
             <div>
-                <h1 className="text-xl font-bold"> JuteWoody Crafts </h1>
+                <h1 className="text-xl font-bold lg:text-xl bg-gradient-to-r from-[#5c566e] via-[#54b226] to-[#494d58] inline-block text-transparent bg-clip-text"> JuteWoody Crafts </h1>
             </div>
 
             <nav>
