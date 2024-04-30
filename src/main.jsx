@@ -15,7 +15,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 
     <AuthProvider>
 
-        <RouterProvider router={router} />
+        <RouterProvider router={router} fallbackElement={<span className="loading loading-spinner loading-lg"></span>} />
 
     </AuthProvider>
 
