@@ -25,6 +25,16 @@ live link : https://assignment-ten-client-si-56d22.web.app/
 - Jute & wooden Crafts
 
 
+## Technologies I have used –
+
+-   React 
+-   MongoDB
+-   Express 
+-   Node js
+-   Tailwind Css
+-   Firebase for authentication
+-   DaisyUI , a component library
+
 
 ## Npm Packages
 
